@@ -7,6 +7,8 @@ public class NewBehaviourScript : MonoBehaviour
     private float rotZ;
     public float rotationSpeed;
     public bool ClockwiseRotation;
+    //int moveCount;
+    //MoveManager moveManager;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,8 @@ public class NewBehaviourScript : MonoBehaviour
         // we would have to change it so that when the gates line up
         // then only the rotation happen to align the gates
         //rotation should be worked on after we do the gates thing
+
+        //moveCount = moveManager.player1Move;
     }
 
     // Update is called once per frame
@@ -37,6 +41,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         Debug.Log("clicks");
         transform.Rotate(0, 0, -90);
+        //moveCount+=1;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
